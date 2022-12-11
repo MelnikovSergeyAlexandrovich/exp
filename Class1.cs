@@ -13,13 +13,10 @@ internal class Menu
     
     public string text()
     {
-        while(true)
-        {
             Console.SetCursorPosition(50, 0);
             Console.WriteLine("Мой компьютер *_*");
             Console.SetCursorPosition(0, 1);
-            Console.WriteLine("========================================================================================================================");
-        }
+            Console.WriteLine("========================================================================================================================");    
     }
 
     public void PrintMenu()
@@ -116,7 +113,7 @@ internal class Menu
                     Console.WriteLine("Введите имя файла,\n" +
                         "который будет создан");
                     var file = Console.ReadLine();
-                    FileStream file = File.Create($"{selected.FullFilename}");
+                    FileStream filee = File.Create($"{selected.FullFilename}"); // без конструктора не робит, так что в это нет смысла :(
                 }
             }  
 
